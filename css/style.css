@@ -1,6 +1,8 @@
 body {
   
     background-image: url("../img/PG_22_Header.jpg");
+    position: relative;
+    z-index: 1;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -17,4 +19,55 @@ body {
         color: darkgreen;
         font-size: 30px;
         border-radius: 5px;
+        }
+        p {
+            padding: 10px;
+            text-align: center;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            color: darkgreen;
+            font-size: 20px;
+            border-radius: 5px;     
+        }
+        div.karriär_knapp {
+            margin-top: 100px; 
+            padding: 10px;
+            padding-top: 200px;
+            padding-left: 1200px;
+            text-align: right;
+            width: 15%;
+        }
+        a {
+        text-align: right;
+        }
+        div.log_out_knapp
+        {
+            text-align: center;
+            margin-top: 10px; 
+            padding: 10px;
+            padding-top: 50px;
+            text-align: right;
+            width: 15%;
+        }
+        div.Kategori_knapp
+        {
+            color: darkgreen;
+            font-size: 20px;
+            border-radius: 5px;    
+        }
+        button
+        {
+            color: darkgreen;
+            font-size: 20px;
+            border-radius: 5px; 
+        }
+        g{
+        /*    background-image: url("../img/Kompass.jpg");
+            position: absolute;
+            margin-top: 10px;
+            width:  15%;
+            top: 500px;
+            left: 300px;
+            z-index: 2; */
         }
