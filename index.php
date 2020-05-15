@@ -12,14 +12,26 @@
         
     </head>
     <body>
-<<<<<<< HEAD
+    
     <div class="header">
+        <div name="Rubrik" class="rubrik">
             <h1>Systemvetarkarriär</h1>
+        </div>       
+    
             
+        
+    <div name="Buttons" class="Btns">
+        <div>
+            <form action="" name="RegBtn">
+            <input type="submit" value="Registrera dig"></form>
         </div>
-=======
-    Jag har gjort lite ändringar.
->>>>>>> e65d90034b2b5e17e68af4c2284f9f32356fef09
+        <div>
+            <form action="" name="LogBtn">
+            <input type="submit" value="Logga in"></form>
+        </div>
+    </div>
+    </div>
+
     </body>
 
 </html>
