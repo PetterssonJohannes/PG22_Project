@@ -12,10 +12,14 @@
         
     </head>
     <body>
+<<<<<<< HEAD
     <div class="header">
             <h1>Systemvetarkarriär</h1>
             
         </div>
+=======
+    Jag har gjort lite ändringar.
+>>>>>>> e65d90034b2b5e17e68af4c2284f9f32356fef09
     </body>
 
 </html>
