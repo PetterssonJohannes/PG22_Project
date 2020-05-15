@@ -8,7 +8,7 @@
         <h1 >
             <meta charset="utf-8"/>   
         </h1>
-        <link rel="stylesheet" type ="text/css" href ="css/style.css">
+        <link rel="stylesheet" type ="text/css" href ="css/LogedIn.css">
         
     </head>
     <a>
