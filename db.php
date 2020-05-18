@@ -21,6 +21,9 @@ $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100)
         return true;
     } 
     
+<<<<<<< HEAD
+   
+=======
     
 <<<<<<< HEAD
    
@@ -29,7 +32,11 @@ $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100)
 
    
 
+<<<<<<< HEAD
 >>>>>>> 00d386d2fa34476469baca30dbd340cee26ed9d6
+=======
+>>>>>>> cf0b4a3c28341be81ff76afbb310ac7b1be71549
+>>>>>>> 16b2b46cbd61cb086162c16d562a9d1e9fd646f0
     echo $password;
     return true;
 }*/

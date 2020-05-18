@@ -41,3 +41,6 @@ function ValidateRegistration(){
         }
 }
 
+function Metod(){
+    return true;
+}
