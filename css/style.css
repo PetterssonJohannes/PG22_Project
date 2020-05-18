@@ -1,6 +1,16 @@
+*
+{
+    box-sizing: border-box;
+}
+head
+{
+    background-color: #f2f2f2;
+}
+
 body {
   
-    background-image: url("../img/PG_22_Header.jpg");
+    background-image: url("../img/PG22_code.jpg");
+    
     position: relative;
     margin: 0px;
     background-repeat: no-repeat;
@@ -9,7 +19,52 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     
     }
-  
+    .header 
+    {
+        width: 100%;
+        height: 130px;
+       
+        
+        margin-top: -3%;
+        text-align: center;
+        background: #f2f2f2;
+        
+    }
+    .rubrik
+    {
+        color: darkblue;
+        font-size: 30px;
+        
+        padding: 0.5%;
+        
+    }
+    .Btns
+    {
+        width: 10%;
+        min-width: 110px;
+        margin: 0% 85%;
+        margin-top: -145px;
+    }
+    input[type=submit] 
+    {
+        width: 120px;
+        height: 40px;
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        padding: 4px 0px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    
+    input[type=submit]:hover 
+    {
+        background-color: blue;
+    }
+    
         p {
             padding: 10px;
             text-align: center;
@@ -61,46 +116,3 @@ body {
             left: 300px;
             z-index: 2; 
         }*/
-.header 
-{
-    width: 100%;
-    height: 150px;
-   
-    
-    margin-top: -40px;
-    text-align: center;
-    background: #f2f2f2;
-    
-}
-.rubrik
-{
-    color: darkblue;
-    font-size: 30px;
-    
-    padding-top: 3px;
-    
-}
-.Btns
-{
-    width: 100px;
-    margin: -13% 90%;
-    padding-top: 3px;
-    margin-top: 15px;
-}
-input[type=submit] 
-{
-    width: 100px;
-    background-color: darkblue;
-    color: white;
-    text-align: center;
-    padding: 14px 15px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover 
-{
-    background-color: blue;
-}
