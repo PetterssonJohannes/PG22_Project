@@ -22,14 +22,14 @@ function ValidateRegistration(){
             alert("Du har inte valt något lösenord");
             return false;
         }
-        else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(!document.registerForm.email.value))
+        else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.registerForm.email.value))
         {
-            alert("Du har fyllt i en felaktig mail!")
-            return false;
+            return true;
         }
         else
         {
-            return true;
+            alert("Du har fyllt i en felaktig mail!")
+            return false;
         }
 }
 
