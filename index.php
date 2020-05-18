@@ -25,11 +25,11 @@
         
             <div name="Buttons" class="Btns">
                 <div>
-                    <form action="" name="RegBtn">
+                    <form action="Registration.php" name="RegBtn">
                     <input type="submit" value="Registrera dig"></form>
                 </div>
                 <div>
-                    <form action="" name="LogBtn">
+                    <form action="login.php" name="LogBtn">
                     <input type="submit" value="Logga in"></form>
                 </div>
             </div>
