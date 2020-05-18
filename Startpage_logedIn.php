@@ -14,11 +14,7 @@
     <a>
     <div>
     <div class="Log_out_knapp">
-<<<<<<< HEAD
     <button onclick="window.location.href='LogOut.php'" type="submit" value="save" name="">Logga ut</button>
-=======
-    <button onclick="return Metod()" action="index.php" type="submit" value="save" name="log_out">Logga ut</button>
->>>>>>> cf0b4a3c28341be81ff76afbb310ac7b1be71549
     </div>
     </a>
     <body>
