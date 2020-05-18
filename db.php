@@ -5,7 +5,7 @@ function CreateTable(){
 }
 function RegisterUser(){
     if(isset($_POST['UserName']) && isset($_POST['UserEmail']))
-=======
+
 $db = new SQLite3('./db/user.db');
 $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100), UserPassword varchar(100), UserEmail varchar(100))');
 /*function Login($username,$password){
@@ -48,7 +48,7 @@ Lägg till Email
 </h1>
 <?php
 if(isset($_POST['UserName']) && isset($_POST['UserEmail']))
->>>>>>> b79850eff9ea328953f4e6712985fe966af2c3bb
+
 {
 
     //Fixa så att det förhindrar SQL-injections
@@ -56,7 +56,7 @@ if(isset($_POST['UserName']) && isset($_POST['UserEmail']))
     $UserPassword=$_POST["UserPassword"];
     $UserEmail=$_POST['UserEmail'];
 }
-$db->exec("INSERT INTO User(UserName, UserPassword, UserEmail) VALUES('$UserNAme', '$UserPassword', '$UserEmail')");
+$db->exec("INSERT INTO User(UserName, UserPassword, UserEmail) VALUES('$UserName', '$UserPassword', '$UserEmail')");
 }
 
 function TestPrint(){
