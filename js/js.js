@@ -6,6 +6,18 @@ if(document.loginForm.password.value =="" || document.loginForm.username.value =
 }
 else return true;
 }
+
 function ErrorMessage(){
     alert("The username and password does not match.");
+}
+
+function ValidateRegistration(){
+if(document.registerForm.username.value =="" || document.registerForm.password.value =="" || document.registerForm.email.value ==""){
+    alert("Du måste fylla i alla fält.");
+    return false;
+}
+else{
+    alert("hej");
+    return true;
+}
 }

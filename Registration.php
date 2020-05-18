@@ -18,7 +18,7 @@
         </div>
 
         <div>
-            <form name="registerForm" onsubmit="return *Valid()*" action="Startpage_logedIn.php" method="POST">
+            <form name="registerForm" onsubmit = "return ValidateRegistration()" action="Startpage_logedIn.php" method="POST">
             <h2>Registrera dig</h2>
             <label>Användarnamn</label><br>
             <input type="text" name="username" value="Eller använda Value?"><br><br>
