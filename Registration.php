@@ -18,10 +18,10 @@
         </div>
 
         <div>
-            <form onsubmit="return ValidateRegistration()" action="" name="registerForm" method="POST">
+            <form onsubmit="return ValidateRegistration()" action="login.php" name="registerForm" method="POST">
                 <h2>Registrera dig</h2>
                 <label for="username">Användarnamn</label><br>
-                <input type="text" name="username" value="Eller använda Value?"><br><br>
+                <input type="text" name="username"><br><br>
                 <label for="password">Lösenord</label><br>
                 <input type="text" name="password"><br><br>
                 <label for="email">Email</label> <br>
