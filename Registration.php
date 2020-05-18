@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <script type="text/javascript" scr="js/js.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <h1>
             <meta charset="utf-8"/>   
@@ -18,15 +18,15 @@
         </div>
 
         <div>
-            <form onsubmit="return ValidateRegistration()" action="Startpage_logedIn.php" name="registerForm" method="post">
+            <form onsubmit="return ValidateRegistration()" action="" name="registerForm" method="POST">
                 <h2>Registrera dig</h2>
-                <label>Användarnamn</label><br>
+                <label for="username">Användarnamn</label><br>
                 <input type="text" name="username" value="Eller använda Value?"><br><br>
-                <label>Lösenord</label><br>
+                <label for="password">Lösenord</label><br>
                 <input type="text" name="password"><br><br>
-                <label>Email</label> <br>
+                <label for="email">Email</label> <br>
                 <input type="text" name="email"><br><br>
-                <label>Jag har läst och godkänner <a href="termsofservice.php" target="_blank">Systemkarriärs användarvillkor</a></label>
+                <label for="accept">Jag har läst och godkänner <a href="termsofservice.php" target="_blank">Systemkarriärs användarvillkor</a></label>
                 <input type="checkbox" name="accept"><br><br>
                 <input type="submit" name="register" value="Registrera">
             </form>
