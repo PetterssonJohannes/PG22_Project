@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <script scr="js/js.js"></script>
+        <script type="text/javascript" scr="js/js.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <h1>
             <meta charset="utf-8"/>   
@@ -18,7 +18,7 @@
         </div>
 
         <div>
-            <form name="registerForm" onsubmit = "return ValidateRegistration()" action="Startpage_logedIn.php" method="POST">
+            <form onsubmit="return ValidateRegistration()" action="Startpage_logedIn.php" name="registerForm" method="post">
             <h2>Registrera dig</h2>
             <label>Användarnamn</label><br>
             <input type="text" name="username" value="Eller använda Value?"><br><br>

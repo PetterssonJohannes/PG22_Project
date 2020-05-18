@@ -12,10 +12,6 @@ function ErrorMessage(){
 }
 
 function ValidateRegistration(){
-
-        document.getElementById("accept").required = true;
-}
-/*
         if(document.registerForm.username.value =="")
         {
             alert("Du har inte fyllt i något namn");
@@ -33,8 +29,7 @@ function ValidateRegistration(){
         }
         else
         {
-            var x = document.getElementById("accept").required;
+            return true;
         }
-        
-    }
-    */
+}
+
