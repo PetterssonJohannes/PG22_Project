@@ -1,4 +1,4 @@
- 
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" >
@@ -21,14 +21,15 @@ $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100)
         return true;
     } 
     
-    echo "Fuck bitches get money";
+    
     echo $password;
     return true;
 }*/
-echo "vad i helvete";
 
 ?>
 <h1>
+
+<body>
 <form method="POST">
 <br>
 Lägg till namn
@@ -42,7 +43,7 @@ Lägg till Email
 <br>
 <input type="submit" value="save">
 </form>
-
+</h1>
 <?php
 if(isset($_POST['UserName']) && isset($_POST['UserEmail']))
 {
@@ -67,5 +68,5 @@ Email: <?php echo $row->UserEmail."</br>";
     echo '<p>---------</p>';
 }
 ?>
-</h1>
+</body>
 </html>
