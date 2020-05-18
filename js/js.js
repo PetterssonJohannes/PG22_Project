@@ -12,12 +12,23 @@ function ErrorMessage(){
 }
 
 function ValidateRegistration(){
-if(document.registerForm.username.value =="" || document.registerForm.password.value =="" || document.registerForm.email.value ==""){
-    alert("Du måste fylla i alla fält.");
-    return false;
-}
-else{
-    alert("hej");
-    return true;
-}
-}
+        if(document.registerForm.username.value == "")
+        {
+            alert("Du har inte fyllt i något namn");
+            return false;
+        }
+        else if(document.registerForm.password.value == "")
+        {
+            alert("Du har inte valt något lösenord");
+            return false;
+        }
+        else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.registerForm.email.value))
+        {
+            return true;
+        }
+        else
+        {
+            alert("Du har fyllt i en felaktig mail!")
+            return false;
+        }
+    }
