@@ -14,9 +14,9 @@
     <a>
     <div>
     <div class="Log_out_knapp">
-    <button onclick="return Metod()" type="submit" value="save" name="log_out">Logga ut</button>
+    <button onclick="window.location.href='LogOut.php'" type="submit" value="save" name="">Logga ut</button>
     </div>
-</a>
+    </a>
     <body>
     <div class="header">
             <h1>Systemvetarkarriär</h1>
@@ -29,11 +29,11 @@
     </br>
     <div>
     <div class="Kategori_knapp">
-    <button onclick="return Metod()" type="submit" value="save" name="kategori">Se samtliga karriärsvägar</button>
+    <button onclick="window.location.href='Careers.php'" name="CareersBtn">Se samtliga karriärsvägar</button>
     </div>
 
     <div class="karriär_knapp">
-    <button onclick="return Metod()" type="submit" value="save" name="Kkompas">Karriär Kompassen</button>>
+    <button onclick="window.location.href='Compass.php'" name="CompassBtn">Karriär Kompassen</button>>
     </div>
 
     </body>
