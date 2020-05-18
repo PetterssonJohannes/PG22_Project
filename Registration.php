@@ -17,8 +17,11 @@
             </div>       
         </div>
 
-        <div>
+<br><br><br>
+        <div class="infobox">
             <form onsubmit="return ValidateRegistration()" action="login.php" name="registerForm" method="POST">
+
+
                 <h2>Registrera dig</h2>
                 <label for="username">Användarnamn</label><br>
                 <input type="text" name="username"><br><br>
