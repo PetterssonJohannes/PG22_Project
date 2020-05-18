@@ -21,7 +21,7 @@ $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100)
         return true;
     } 
     
-    echo "Fuck bitches get money";
+   
     echo $password;
     return true;
 }*/
