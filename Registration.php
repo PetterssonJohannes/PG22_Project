@@ -16,8 +16,8 @@
                 <h1>Systemvetarkarriär</h1><br>
             </div>       
         </div>
-
-        <div>
+<br><br><br>
+        <div class="infobox">
             <form onsubmit="return ValidateRegistration()" action="" name="registerForm" method="POST">
                 <h2>Registrera dig</h2>
                 <label for="username">Användarnamn</label><br>
