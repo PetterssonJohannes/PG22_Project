@@ -27,6 +27,7 @@ $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100)
 }*/
 echo "vad i helvete";
 
+
 ?>
 <h1>
 <form method="POST">
