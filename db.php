@@ -50,7 +50,7 @@ if(isset($_POST['UserName']) && isset($_POST['UserEmail']))
     $UserName = $_POST["UserName"];
     $UserPassword=$_POST["UserPassword"];
     $UserEmail=$_POST['UserEmail'];
-
+}
 $db->exec("INSERT INTO User(UserName, UserPassword, UserEmail) VALUES('$UserNAme', '$UserPassword', '$UserEmail')");
 
 $results = $db->query('SELECT * FROM User');
