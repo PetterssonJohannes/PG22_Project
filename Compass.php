@@ -6,17 +6,20 @@
         <h1 >
             <meta charset="utf-8"/>   
         </h1>
-        <link rel="stylesheet" type ="text/css" href ="css/LogedIn.css">
-        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
+    
     <body>
-    <div class="header">
-            <h1>Systemvetarkarriär</h1>
-            <p>Välkommen till karriärkompassen!</p>
+        <div class="header">
+            <div name="Rubrik" class="rubrik">
+                <h1>Systemvetarkarriär</h1>
         </div>
-        <Form>
+
+        <div class="infobox">
+            <h2>Välkommer till karriärkompassen</h2>
+            <h2>*information om karriärkompassen*</h2>
 
 
-        </Form>
+        </div>
     </body>
 </html>
