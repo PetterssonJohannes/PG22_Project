@@ -17,8 +17,11 @@
             </div>       
         </div>
 
-        <div>
+<br><br><br>
+        <div class="infobox">
             <form onsubmit="return ValidateRegistration()" action="login.php" name="registerForm" method="POST">
+
+
                 <h2>Registrera dig</h2>
                 <label for="username">Användarnamn</label><br>
                 <input type="text" name="username"><br><br>
@@ -30,6 +33,26 @@
                 <input type="checkbox" name="accept"><br><br>
                 <input type="submit" name="register" value="Registrera">
             </form>
+         <?php  
+if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email']))
+{
+    $Name = $_POST['username'];
+    $Email = $_POST['email'];
+    $Password = $_POST['Password'];
+    $UHashed = Salta($Password);
+}
+else
+{
+    echo "Fyll i alla fält";
+}
+function Salta($Password)
+{
+    $UHashed = password_hash($Password, PASSWORD_DEFAULT);
+    return $UHashed;
+}
+?>
+
+
         </div>
     </body>
 </html>
