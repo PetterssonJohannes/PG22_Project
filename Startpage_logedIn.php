@@ -14,9 +14,9 @@
     <a>
     <div>
     <div class="Log_out_knapp">
-    <button onclick="return Metod()" type="submit" value="save" name="log_out">Logga ut</button>
+    <button onclick="return Metod()" action="index.php" type="submit" value="save" name="log_out">Logga ut</button>
     </div>
-</a>
+    </a>
     <body>
     <div class="header">
             <h1>Systemvetarkarriär</h1>
