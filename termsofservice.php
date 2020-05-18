@@ -17,20 +17,15 @@
             </div>   
         <div>
 
-        <div>
-            <h2>Här ska vi ha våra regler</h2>
-            <p>§1. You do not talk about Systemkarriär.<p>
-            <p>§2. You DO NOT talk about Systemkarriär.<p>
+        <div class="infobox">
+            <div>
+                <h2>Här ska vi ha våra regler</h2>
+                <div>
+                    <?php
+                        echo file_get_contents( "TEST TEST TEST.txt" );
+                    ?>
+                </div>
+            </div>
         </div>
-
-        <div>
-            <p>Regler inlästa från fil:<p>
-        </div>
-        <div>
-            <?php
-                echo file_get_contents( "TEST TEST TEST.txt" );
-            ?>
-        </div>
-
     </body>
 </html>
