@@ -22,11 +22,14 @@ function ValidateRegistration(){
             alert("Du har inte valt något lösenord");
             return false;
         }
+        /* - Kolla mailen! 
         else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(!document.registerForm.email.value))
         {
             alert("Du har fyllt i en felaktig mail!")
             return false;
         }
+        */
+        
         else if (!document.registerForm.accept.checked)
         {
             alert("Du måste godkänna användarvillkoren för att skapa ett konto.");
