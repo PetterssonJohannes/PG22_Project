@@ -3,58 +3,22 @@ function CreateTable(){
     $db = new SQLite3('./db/user.db');
     $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100), UserPassword varchar(100), UserEmail varchar(100))');
 }
-function RegisterUser(){
-    if(isset($_POST['UserName']) && isset($_POST['UserEmail']))
+function RegisterUser($username, $email $password){
 $db = new SQLite3('./db/user.db')
 $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100), UserPassword varchar(100), UserEmail varchar(100))');
-/*function Login($username,$password){
-    /* 
-    Server side confirmation, kolla om lösenordet matchar användarnamnet i databasen.
-    
-    if($username == "" || $password ==""){
-        echo "not good";
-        return false;
-    }
-    else{
-        echo "very good";
-        return true;
-    } 
-    
-    echo $password;
+$stmt->prepare("INSERT INTO TABLE User(UserName, UserPassword, UserEmail) VALUES (:username, :email, :hashedPassword)");
+$hashedPass = password_hash($password);
+$stmt->bindParam( ':username', $username, SQLITE3_TEXT);
+$stmt->bindParam( ':email', $email, SQLITE3_TEXT);
+$stmt->bindParam( ':hashedPassword', $hashedPass, SQLITE3_TEXT);
+if($db->execute($stmt)){
+    $db->close();
     return true;
-}*/
-
-
-
-
-?>
-<h1>
-
-<body>
-<form method="POST">
-<br>
-Lägg till namn
-<input type="text" name="UserName">
-<br> 
-Lägg till Lösenord
-<input type="text" name="UserPassword">
-<br>
-Lägg till Email
-<input type="text" name="UserEmail">
-<br>
-<input type="submit" value="save">
-</form>
-</h1>
-<?php
-if(isset($_POST['UserName']) && isset($_POST['UserEmail']))
-{
-
-    //Fixa så att det förhindrar SQL-injections
-    $UserName = $_POST["UserName"];
-    $UserPassword=$_POST["UserPassword"];
-    $UserEmail=$_POST['UserEmail'];
 }
-$db->exec("INSERT INTO User(UserName, UserPassword, UserEmail) VALUES('$UserName', '$UserPassword', '$UserEmail')");
+else{
+    $db->close();
+    return false;
+}
 }
 
 function TestPrint(){
@@ -88,5 +52,4 @@ function ValidateLogin($Email){
     
     }
 }
-
 ?>
