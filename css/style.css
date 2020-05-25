@@ -182,3 +182,19 @@ body {
             left: 300px;
             z-index: 2; 
         }*/
+#IT-sak
+{
+    background-image: url("../img/PG22_Security.jpg");
+}
+#Projektutveckling
+{
+    background-image: url("../img/PG22_group.jpg");
+}
+#Mjukvaruutveckling
+{
+    background-image: url("../img/PG22_test.jpg");
+}
+#IT-testning
+{
+    background-image: url("../img/PG22_dev.jpg.jpg");
+}
