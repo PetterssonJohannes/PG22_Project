@@ -23,27 +23,35 @@
     <div id="karriarer" class="row">
         <div class="column">
         IT-säkerhet
+        <a href="IT-säk.php">
         <div id="IT-sak">
-            <img src="./img/PG22_code.jpg" width="90%" />
+            <img src="./img/PG22_Security.jpg" width="90%" />
         </div>
+        </a>
         </div>
         <div class="column">
         Projektutveckling
-        <div id="IT-sak">
-            <img src="./img/PG22_code.jpg" width="90%" />
+        <a href="Projektutveckling.php">
+        <div id="Projektutveckling">
+            <img src="./img/PG22_group.jpg" width="90%" />
         </div>
+        </a>
         </div>
         <div class="column">
         Mjukvaruutveckling
-        <div id="IT-sak">
-            <img src="./img/PG22_code.jpg" width="90%" />
+        <a href="Mjukvaruutveckling.php">
+        <div id="Mjukvaruutveckling">
+            <img src="./img/PG22_test.jpg" width="90%" />
         </div>
+        </a>
         </div>
         <div class="column">
         IT-testning
-        <div id="IT-sak">
-            <img src="./img/PG22_code.jpg" width="90%" />
+        <a href="IT-testning.php">
+        <div id="IT-testning">
+            <img src="./img/PG22_dev.jpg" width="90%" />
         </div>
+        </a>
         </div>
     </div>
     </body>
