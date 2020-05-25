@@ -1,6 +1,7 @@
 *
 {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 head
 {
@@ -69,7 +70,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    font-family: Helvetica, Arial, sans-serif;
+    
     
     }
     .header 
@@ -98,7 +99,8 @@ body {
     {
         color: rgb(86, 86, 136);
         font-size: 30px;
-        
+        font-weight: bold;
+        text-transform: uppercase;
         padding: 0.5%;
         
     }
