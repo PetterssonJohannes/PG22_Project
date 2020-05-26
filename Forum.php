@@ -1,0 +1,3 @@
+<?php
+//Själva forumet
+?>

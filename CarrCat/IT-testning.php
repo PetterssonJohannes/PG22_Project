@@ -1,5 +1,5 @@
 <?php
-include_once('/_views/_rubrik.php');
+include_once('../_views/_rubrik.php');
 ?>
 <!DOCTYPE html>
 <html>

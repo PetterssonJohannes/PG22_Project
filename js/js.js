@@ -10,7 +10,101 @@ else return true;
 function ErrorMessage(){
     alert("The username and password does not match.");
 }
+function ValidateEmailPass(password, email)
+{
+  var passw = document.getElementById("password").value;
+  var email = document.getElementById("email").value;
+  if(ValidateEmail(email))
+  {
+    if(ValidatePass(passw))
+    { 
+      return true;
+    }
+    else
+    {
+        alert("Your Password is incorrect");
+        return false;
+    } 
+  }
+  else
+  {
+    alert("Your E-mail adrress is incorrect");
+    return false;
+  }
+}
+function ValidatePost()
+{
+  var mess = document.fpost.messege.value;
+  var trimmess = mess.trim();
+    if(trimmess == "")
+    {
+              alert("Entry can't be empty!");
+              //return false;
+    }
+    else
+    {
+     console.log("All fields are not empty");
+              //return true;
+    }
+}     
+function ValidatePass(passw)
+{
+  var trimpassw = passw.trim();
+  passwlength = passw.length;
+    if(trimpassw == "")
+    {
+        alert("You need to enter a correct E-mail adrress!");
+        return false;
+    }
+    else
+    {
+      if(passwlength<6)
+      {
+        alert("Your password needs to be at least 6 characters long. Please try again!");
+        return false;
+      }
+      else
+      {       
+        return true;  
+      }
+    }
+}
+function ValidateEmail(email)
+{
+  var trimemail = email.trim();
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+  lastindex = email.length-1;
+    if(trimemail == "" || atpos == -1 || dotpos == -1 || atpos <2 || dotpos < atpos || lastindex - dotpos < 2 || dotpos - atpos < 2 || dotpos == lastindex)
+    {
+        alert("Please fill out the form correctly!");
+        return false;
+    }
+    else
+    { 
+      return true;   
+    }
+}
+$( document ).ready(function() {
+  $('#forumpost').submit(function(e){
+    e.preventDefault();
+    $textval = $('#message').val();
+    $.ajax({
+      url: 'ProcessPost.php',
+      type: 'POST',
+      data: {'message':$textval},
+      success: function(response) {
+        alert("Nytt inlägg!");
+        }
+      });
+  });
+});
 
+$( document ).ready(function() {
+  $('#forumpost').submit(function(){
+    $.ajax("#ForumWindow").load('Lab3ES_views/_ForumPosts.php');
+  });
+});
 function ValidateRegistration(){
         if(document.registerForm.username.value =="")
         {

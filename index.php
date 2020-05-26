@@ -20,7 +20,9 @@
             <div name="Rubrik" class="rubrik">
                 <h1>Systemvetarkarriär</h1>
             </div>       
-    
+    <?php
+        echo password_hash('Johannes', PASSWORD_BCRYPT);
+    ?>
             
         
             <div name="Buttons" class="Btns">

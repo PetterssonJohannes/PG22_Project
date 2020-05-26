@@ -76,7 +76,7 @@ body {
     .header 
     {
         width: 100%;
-        height: 130px;
+        min-height: 150px;
        
         
         margin-top: -3%;
@@ -102,14 +102,14 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         padding: 0.5%;
-        
+        margin-top: 10px;
     }
     .Btns
     {
         width: 10%;
         min-width: 110px;
         margin: 0% 85%;
-        margin-top: -145px;
+        margin-top: -115px;
     }
     input[type=submit] 
     {
