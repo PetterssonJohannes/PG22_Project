@@ -5,17 +5,12 @@
     <head>
         <script type="text/javascript" src="js/js.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <h1>
-            <meta charset="utf-8"/>   
-        </h1> 
+        <meta charset="utf-8"/>   
     </head>
-
     <body>
-        <div class="header">
-            <div name="Rubrik" class="rubrik">
-                <h1>Systemvetarkarriär</h1><br>
-            </div>       
-        </div>
+    <?php
+        include_once "_views/_rubrik.php";
+    ?>
 
 <br><br><br>
         <div class="infobox">

@@ -8,29 +8,22 @@
 
     
     <body>
-    <div class="header">
-            <div name="Rubrik" class="rubrik">
-                <h1>Systemvetarkarriär</h1>
-            </div>       
-    
-            
+    <?php
+        include_once "_views/_rubrik.php";
         
-            
-        </div>
-        <div id="space">
-            
-        </div>
-        <br>
+    ?>
+    <br><br><br><br><br>
     <div class="infobox">
-    <br>
+    
         <form name = "loginForm" onsubmit = "return ValidateLogin()" action ="validateLogin.php" method = "POST">
+        <h2> Logga in </h2>
         <label>Namn</label>
         <input type = "text" name = "username" placeholder="Ditt namn..." required>
         <br><br>
         Lösenord
         <input type = "text" name = "password" placeholder="Ditt lösenord..." required>
         <br><br>
-        <input type = "submit" name = "Login" value = "Login"/>
+        <input type = "submit" class="VanligBtns" name = "Login" value = "Login"/>
         </form>
         </div>
     </body>

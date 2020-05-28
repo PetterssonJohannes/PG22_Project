@@ -12,7 +12,7 @@ head
     height: 20%;
     padding: 10%;
 }
-#karriarer
+.karriarer
 {
     padding: 40px;
     text-align: center;
@@ -28,15 +28,16 @@ head
 }
 .karriarer_img
 {
-    width: 80%;
+    height: 150px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 .column
 {
     float: left;
-    width: 25%;
-    
+    width: 24%;
+    margin: 0.5%;
 }
 .row::after
 {
@@ -53,148 +54,238 @@ head
     margin-right: auto;
     background: #f2f2f2;
     color: darkblue;
-    
     font-size: 20px;
     border-radius: 5px;
 }
-#IT-sak
-{
-    background-image: url("../img/PG22_code.jpg");
-}
 body {
-  
     background-image: url("../img/PG22_code.jpg");
-    
     position: relative;
     margin: 0px;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+    min-width: 1250px;
+}
+.header 
+{
+    text-align: center;
+    background: #f2f2f2; 
+}
+.subheader 
+{
+    width: 100%;
+    height: 90px;
+    margin-top: -3%;
+    text-align: center;
+    background: #f2f2f2;
     
-    
-    }
-    .header 
-    {
-        width: 100%;
-        min-height: 150px;
-       
-        
-        margin-top: -3%;
-        text-align: center;
-        background: #f2f2f2;
-        
-    }
-    .subheader 
-    {
-        width: 100%;
-        height: 90px;
-       
-        
-        margin-top: -3%;
-        text-align: center;
-        background: #f2f2f2;
-        
-    }
-    .rubrik
-    {
-        color: darkblue;
-        font-size: 25px;
-        font-weight: bold;
-        text-transform: uppercase;
-        padding: 0.5%;
-        margin-top: 10px;
-    }
-    .Btns
-    {
-        width: 10%;
-        min-width: 110px;
-        margin: 0% 85%;
-        margin-top: -115px;
-    }
-    input[type=submit] 
-    {
-        width: 120px;
-        height: 40px;
-        background-color: darkblue;
-        color: white;
-        text-align: center;
-        padding: 4px 0px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    }
-    
-    input[type=submit]:hover 
-    {
-        background-color: blue;
-    }
-    
-        p {
-            padding: 10px;
-            text-align: center;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            color: darkgreen;
-            font-size: 20px;
-            border-radius: 5px;     
-        }
-        div.karriär_knapp {
-            margin-top: 100px; 
-            padding: 10px;
-            padding-top: 200px;
-            padding-left: 1200px;
-            text-align: right;
-            width: 15%;
-        }
-        a {
-        text-align: right;
-        }
-        div.log_out_knapp
-        {
-            text-align: center;
-            margin-top: 10px; 
-            padding: 10px;
-            padding-top: 50px;
-            text-align: right;
-            width: 15%;
-        }
-        div.Kategori_knapp
-        {
-            color: darkgreen;
-            font-size: 20px;
-            border-radius: 5px;    
-        }
-        button
-        {
-            color: darkgreen;
-            font-size: 20px;
-            border-radius: 5px; 
-        }
-         /* g{
-          background-image: url("../img/Kompass.jpg");
-            position: absolute;
-            margin-top: 10px;
-            width:  15%;
-            top: 500px;
-            left: 300px;
-            z-index: 2; 
-        }*/
+}
+.rubrik
+{
+    color: darkblue;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5%;
+    margin-top: 10px;
+}
+.Btns
+{
+    width: 10%;
+    min-width: 110px;
+    margin: 0% 87%;
+    margin-top: -145px;
+}
+.WideBtns
+{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#ValkommenMed
+{
+    height: 200px;
+    margin-top: 0px;
+}
+.TwoBtns
+{
+    min-width: 970px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+#FirOfTwoBtns
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 48%;
+    float: left;
+}
+#SecOfTwoBtns
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 48%;
+    float: right;
+}
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 10px 10%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: 10px;
+  }
+input[type=submit] 
+{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+input[type=submit]:hover 
+{
+    background-color: blue;
+}
+p 
+{
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: darkblue;
+    font-size: 20px;
+    border-radius: 5px;     
+}
+#karriar_knapp {
+    float: left;
+    text-align:center;
+    margin: 15px;
+    margin-left: 35px;
+}
+#kategori_knapp {
+    float: right;
+    text-align:center;
+    margin: 15px;
+    margin-right: 35px;
+}
+div.log_out_knapp
+{
+    text-align: center;
+    margin-top: 10px; 
+    padding: 10px;
+    padding-top: 50px;
+    text-align: right;
+    width: 15%;
+}
+
+.VanligBtns
+{
+    width: 120px;
+    height: 40px;
+}
+#Valkommentext
+{
+    margin-top: 0px;
+}
+button
+{
+    width: 120px;
+    height: 40px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+/*button2
+{
+    height: 40px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+    /* g{
+    background-image: url("../img/Kompass.jpg");
+    position: absolute;
+    margin-top: 10px;
+    width:  15%;
+    top: 500px;
+    left: 300px;
+    z-index: 2; 
+}*/
 #IT-sak
 {
     background-image: url("../img/PG22_Security.jpg");
+    background-size: 100%;
 }
 #Projektutveckling
 {
     background-image: url("../img/PG22_group.jpg");
+    background-size: 100%;
+   background-position-y: center;
 }
 #Mjukvaruutveckling
 {
     background-image: url("../img/PG22_test.jpg");
+    background-size: 100%;
 }
 #IT-testning
 {
-    background-image: url("../img/PG22_dev.jpg.jpg");
+    background-image: url("../img/PG22_dev.jpg");
+    background-size: 110%;
+}
+#Logga
+{
+    background-image: url("../img/PG22_Logga.png");
+    background-position: 50% 28%;
+    background-size: 1000px 800px;
+    background-repeat: no-repeat;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px blue;
+    min-height: 200px;
+}
+#Logga:hover
+{
+    background-image: url("../img/PG22_Logga_hov.png");
+    background-position: 50% 28%;
+    background-size: 1000px 800px;
+    background-repeat: no-repeat;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 200px;
+}
+#loggastrl
+{
+    height: 100px;
 }

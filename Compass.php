@@ -3,18 +3,16 @@
 <title>Systemvetarkarriär_inloggad</title>
     <head>
         <script src="https:ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <h1 >
-            <meta charset="utf-8"/>   
-        </h1>
+        <meta charset="utf-8"/>   
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     
     <body>
-        <div class="header">
-            <div name="Rubrik" class="rubrik">
-                <h1>Systemvetarkarriär</h1>
-        </div>
-
+        <?php
+            include_once "_views/_rubrik.php";
+            include_once "_views/_LogRegBtn.php";
+        ?>
+        <br><br><br>
         <div class="infobox">
             <h2>Välkommer till karriärkompassen</h2>
             <h2>*information om karriärkompassen*</h2>
@@ -69,7 +67,7 @@
                     <input type="radio" name="radio" value="5"/>5
                 </form>
                 <br>
-                <input type="submit" name="question" value="Skicka in">
+                <input type="submit" class="VanligBtns" name="question" value="Skicka in">
             </form>
         </div>
     </body>
