@@ -1,4 +1,4 @@
-<div name="Buttons" class="Btns">
+<div name="Buttons" class="BtnsRight">
     <div>
         <form action="Registration.php" name="RegBtn">
         <input type="submit" class="VanligBtns" value="Registrera dig"></form>

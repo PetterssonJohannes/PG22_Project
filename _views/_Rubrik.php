@@ -1,5 +1,5 @@
 <div class="header">
-    <a href="index.php" id="loggastrl">    
+    <a href="PG22_Project/index.php" id="loggastrl">    
         <div id="Logga" class="Rubrik">
         <br><br><br><br><br>
         
