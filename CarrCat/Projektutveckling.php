@@ -14,7 +14,7 @@
     <form action="../Careers.php" name="TillbakaBtn">
     <input type="submit" class="VanligBtns" value="Gå tillbaka"></form>
 </div>
-<br><br><br><br>
+<br><br><br><br><br>
     <div class="ValkommenMed2 infobox">
         <h1> IT-Testning </h1>
     </div>
