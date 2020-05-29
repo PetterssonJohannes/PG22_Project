@@ -84,4 +84,41 @@ function Login($username, $password){
     
     
 }
+
+function Save_post($ComName, $Comments) //Ny post från Calle
+{
+    $db = new SQLite3('./db/user.db');
+    $db->exec('CREATE TABLE IF NOT EXISTS forum(CommentsID integer, Comments varchar(500), ComName varchar(255))');
+    $sql = "INSERT INTO 'forum'('Comments', 'ComName') VALUES (:Comments, :ComName)";
+    $stmt = $db->prepare($sql); 
+    $stmt->bindParam(':Comments', $Comments, SQLITE3_TEXT);
+    $stmt->bindParam(':ComName', $ComName, SQLITE3_TEXT);
+    if($stmt->execute())
+    {
+        $db->close();
+        return true;
+    }
+    else
+    {
+        $db->close();
+        return false;
+    }
+}
+function Print_Comments() //Ny post från calle
+{
+        $db = new SQLite3('./db/user.db');
+        $results = $db->query('SELECT * FROM forum');
+        while ($row = $results->fetchArray()) 
+            {
+                $row = (object) $row; ?>
+                ID:  <?php echo $row->CommentsID."</br>"; ?>
+
+                Inlägg: <?php echo $row->Comments."</br>"; ?>
+
+                Författare: <?php echo $row->ComName."</br>";
+
+                echo '<p>---------</p>';
+            }
+}
+
 ?>
