@@ -62,13 +62,25 @@ head
     font-size: 20px;
     border-radius: 5px;
 }
+.Katinfobox
+{
+    padding: 10px;
+    text-align: center;
+    width: 56%;
+    margin: 1% 2%;
+    float: left;
+    background: #f2f2f2;
+    color: darkblue;
+    font-size: 20px;
+    border-radius: 5px;
+}
 .annonsbox
 {
     padding: 10px;
     text-align: right;
-    width: 300px;
+    width: 36%;
     float: right;
-    margin-right: 1%;
+    margin: 1% 2%;
     background: #f2f2f2;
     color: darkblue;
     font-size: 12px;
@@ -135,9 +147,14 @@ body {
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-#ValkommenMed
+.ValkommenMed
 {
     height: 200px;
+    margin-top: 0px;
+}
+.ValkommenMed2
+{
+    height: 100px;
     margin-top: 0px;
 }
 .TwoBtns

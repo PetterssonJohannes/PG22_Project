@@ -17,8 +17,12 @@ include_once('../_views/_rubrik.php');
     <input type="submit" class="VanligBtns" value="Gå tillbaka"></form>
 </div>
 
-    <br><br><br><br><br><br>
-        <div class="infobox">
+    <br><br><br><br>
+    <div class="ValkommenMed2 infobox">
+        <h1> IT-Säkerhet </h1>
+    </div>
+    <div>
+        <div class="Katinfobox">
             Att arbeta med IT-säkerhet innebär att du blir efterfrågad i de flest sammanhang och har möjliga karriärsvägar både in i den privata- och publika sektorn. Inom den privata sektorn finns uppgifter som att skydda företags  digitala resurser från skadliga program och liknande. Inom den offentliga sektorn finns möjlighet att arbeta inom polisen och militären bland annat. 
         </div>
         <div
@@ -31,5 +35,10 @@ include_once('../_views/_rubrik.php');
         data-modal="false"
         >
         </div>
+        <div id="IT-sak" class="Katinfobox">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
+        <p> </p>
+        </div>
+    </div>    
     </body>
 </html>

@@ -17,7 +17,7 @@
     <br><br><br><br><br><br><br><br>
     
     
-    <div class="infobox" id="ValkommenMed">  
+    <div class="infobox ValkommenMed">  
     <br> 
         <p>Välkommen "användare"</p>
         

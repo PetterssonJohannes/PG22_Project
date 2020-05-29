@@ -10,7 +10,7 @@ function Go_post()
     }
     else
     {
-    ?> <h2>Skriv något du vill posta</2>; <?php
+    ?> <h2>Skriv något du vill posta</2> <?php
     }
     
 }
