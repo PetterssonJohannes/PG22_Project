@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['UserID'])){
+    header("Location: LogOut.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <title>Systemvetarkarriär_inloggad</title>
@@ -19,7 +26,7 @@
     
     <div class="infobox ValkommenMed">  
     <br> 
-        <p>Välkommen "användare"</p>
+        <p>Välkommen <?php echo $_SESSION['UserName']; ?></p>
         
         <div id="kategori_knapp">
             <button onclick="window.location.href='Careers.php'" name="CareersBtn">Se samtliga karriärsvägar</button>
@@ -28,8 +35,8 @@
         <div id="karriar_knapp">
             <button onclick="window.location.href='Compass.php'" name="CompassBtn">Karriärkompassen</button>
         </div>
+    
     </div>
-
  
     </body>
 

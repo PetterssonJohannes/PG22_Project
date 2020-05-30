@@ -1,5 +1,5 @@
 <?php
-
+include "db.php";
 $UserName = $_POST["username"];
 $email = $_POST["email"];
 $password = $_POST["password"];
@@ -23,7 +23,10 @@ else
     {
         if(ExistingUName($UserName))
         {
-            password_hash($_POST['username'], PASSWORD_BCRYPT);
+            if(RegisterUser($UserName,$email,$password)){
+                echo "<script type='text/javascript'>alert('Registreringen lyckades!'); window.location.href='login.php';</script>";
+            }
+
         }
         else
         {

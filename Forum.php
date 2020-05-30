@@ -1,20 +1,17 @@
 <?php
+session_start();
+if(!isset($_SESSION['UserID'])){
+    header("Location: LogOut.php");
+}
+?>
+<?php
         include_once "_views/_rubrik.php";
         
 ?>
 <meta charset="utf-8"/>   
         <link rel="stylesheet" type ="text/css" href ="css/style.css">
 <?php 
-session_start();
-/*//if(isset($_SESSION['user']))
-{
-    echo "Välkommen </br>";
-        echo $_SESSION['user'];
-}
-else
-{
-header("Location: index.php");
-}*/
+
 ?> 
 
 <br>

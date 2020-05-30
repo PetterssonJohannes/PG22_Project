@@ -29,8 +29,3 @@
     </body>
     
 </html>
-<?php 
-//include "db.php";
-/*ValidateLogin($_POST["username"],$_POST["password"]); */
-/* fixa metod som kollar i databasen om det är tomt eller inte*/
-?>

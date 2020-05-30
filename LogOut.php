@@ -1,5 +1,5 @@
 <?php
-session_start();
-unset($_SESSION['Id']);
-session_destroy();
+    session_start();
+    session_destroy();
+    header("Location: index.php");
 ?>

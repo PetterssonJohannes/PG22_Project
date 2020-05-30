@@ -13,7 +13,6 @@
     <?php
         include_once "_views/_rubrik.php";
         include_once "_views/_LogRegBtn.php";
-        echo password_hash('Johannes', PASSWORD_BCRYPT);
     ?>
     <div class="TwoBtns">
         <div>
