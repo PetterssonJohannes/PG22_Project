@@ -20,35 +20,40 @@ include_once "_views/_rubrik.php";
 include_once "_views/_LoggaUt.php";
 ?>
 <br><br><br><br><br><br><br>
-<div class = "Publicera infobox">
-<form id="comment" name="comment" method="POST">
-    Välkommen <?php echo $_SESSION['UserName'] ?>
-            <h2>Skriv en kommentar?</h2>
-<p>
-            <textarea id="textarea1" name="textarea1"></textarea>
-            <a class = "submit VanligBtns button" name = "submit" href="javascript:void(0)">Publicera</a>
-</p>
-</form>
-</div>
-<br>
-<div class = "Publicera infobox">
-<form id="sea" name="sea" method="POST">
-<h3>Sök efter ett inlägg nedan</h3>
-<input type="text" name = "search_input" id ="search_input">
-<a class = "search VanligBtns button" name = "search" href="javascript:void(0)">Sök i forum</a>
-</form>
-<br>
-</div>
-<br>
+<div class="Fullbox">
+  <br>
+<h2>Välkommen <?php echo $_SESSION['UserName'] ?> </h2>
 
+  <div class = "Publicera Katinfobox">
+    
+    <form id="comment" name="comment" method="POST">
+    
+            <h2>Skriv en kommentar?</h2>
+      
+            <textarea id="textarea1" class="textarea1" name="textarea1"></textarea>
+            <a class = "submit VanligBtns button" name = "submit" href="javascript:void(0)">Publicera</a>    
+    </form>
+  </div>
+  <br>
+  <div class = "Publicera annonsbox">
+    <form id="sea" name="sea" method="POST">
+      <h2>Sök efter ett inlägg nedan</h2>
+      <input type="text" name = "search_input" id ="search_input">
+      <a class = "search VanligBtns button" name = "search" href="javascript:void(0)">Sök i forum</a>
+    </form>
+    <br>
+  </div>
+</div>
+<br><br>
+<div class = "Publicera ForumWindow">
 <form id="pri" class="infobox" name="pri" method="POST">
 <h3>Se tidigare publikationer</h3>
 <a class = "prin VanligBtns button" name = "prin" href="javascript:void(0)">Visa kommentarer</a>
 </form>
 <br>
 
-<div class = "Publicera">
-<div class="post_listing ForumWindow"></div>
+
+<div class="post_listing"></div>
 </div>
 
 <script type="text/javascript">
