@@ -1,7 +1,3 @@
-<?php
-        include_once "_views/_rubrik.php";
-        
-?>
 <!DOCTYPE html>
 <html lang="sv"> 
 <head>
@@ -15,24 +11,33 @@
 session_start();
 if(isset($_SESSION['AdminStatus']))
 {
-    echo "Välkommen </br>";
-        echo $_SESSION['UserName'];
+    
 }
 else
 {
 header("Location: index.php");
 }
+
+    include_once "_views/_rubrik.php";
+    include_once "_views/_LoggaUt.php"
 ?>
+
 <body>
-<h1> Du har mycket makt, för du är admin - Limpan <h1>
+    <br><br><br><br><br><br>
+<div class="infobox">
+<?php
+echo "Välkommen </br>";
+        echo $_SESSION['UserName'];
+?>
+</div>
+<div class="TwoBtns">
+    <div name="redforum_knapp" id="FirOfTwoBtns">
+        <button onclick="window.location.href='AdminForum.php'" class="WideBtns" name="redforumBtn">Ta bort inlägg</button>
+    </div>
 
-<div id="redforum_knapp">
-            <button onclick="window.location.href='AdminForum.php'" name="redforumBtn">ta bort inlägg</button>
-        </div>
-
-        <div id="redkonto_knapp">
-            <button onclick="window.location.href='AdminUser.php'" name="redkotoBtn">ta bort användarkonton</button>
-        </div>
-
+    <div name="redkonto_knapp" id="SecOfTwoBtns">
+        <button onclick="window.location.href='AdminUser.php'" class="WideBtns" name="redkotoBtn">Ta bort användarkonton</button>
+    </div>
+</div>
 </body>
 </html>

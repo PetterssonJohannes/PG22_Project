@@ -17,14 +17,9 @@ $stmt->bindValue(':search',"%".$Search."%", SQLITE3_TEXT);
 $result = $stmt->execute();
 while($row = $result->fetchArray())
     {
-        $row = (object) $row; ?>
-        ID:  <?php echo $row->PostID."</br>"; ?>
-
-        Inlägg: <?php echo $row->Message."</br>"; ?>
-
-        Författare: <?php echo $row->UserName."</br>";
-
-        echo '<p>---------</p>';
+        echo '<div id="ForumDisplay">'.'<div id="ForumUserInfoBox">'.'<div class="ForumUserInfo">'.$row['UserName'].'<br>'.$row['PostID'].'</div>'.'</div>'.'<div id="ForumMessageBox">'.'<div class="ForumUserMessage">'.$row['Message'].'</div>'.'</div>'.'</div>';          
+        
+        echo '<hr class="solid">';  
     }
 }
 ?>

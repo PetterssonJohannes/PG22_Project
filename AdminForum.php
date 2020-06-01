@@ -1,7 +1,3 @@
-<?php
-        include_once "_views/_rubrik.php";
-        
-?>
 <!DOCTYPE html>
 <html lang="sv"> 
 <head>
@@ -15,42 +11,43 @@
 session_start();
 if(isset($_SESSION['AdminStatus']))
 {
-    echo "Välkommen </br>";
-        echo $_SESSION['UserName'];
 }
 else
 {
 header("Location: index.php");
 }
+  include_once "_views/_rubrik.php";
+  include_once "_views/_LoggaUt.php";
 ?>
-<div class = "Publicera">
-<form id="delete" name="delete" method="POST">
-    
-            <h2>Skriv in forum-id för att radera inlägg?</h2>
-<p>
-            <input type="number" id="number" name="number"></input>
-            <a class = "submit" name = "submit" href="javascript:void(0)">Radera inlägg</a>
-</p>
-</form>
+<br><br><br><br><br><br>
+<div class="Fullbox2">
+  <br>
+  <h2>Välkommen <?php echo $_SESSION['UserName'] ?> </h2>
+  
+  <div class = "Publicera Katinfobox">
+    <form id="delete" name="delete" method="POST">
+      <h2>Skriv in forum-id för att radera inlägg?</h2>
+      <input type="number" id="number" name="number"></input>
+        <a class = "submit VanligBtns button" name = "submit" href="javascript:void(0)">Radera inlägg</a>
+    </form>
+  </div>
+  <div class = "Publicera annonsbox">
+    <form id="sea" name="sea" method="POST">
+      <h2>Sök efter specifikt inlägg</h2>
+      <input type="text" name = "search_input" id ="search_input">
+      <a class = "search VanligBtns button" name = "search" href="javascript:void(0)">Sök i forum</a>
+    </form>
+    <br>
+  </div>
 </div>
-<div class = "Publicera">
-<form id="sea" name="sea" method="POST">
-<h3>Sök efter specifikt inlägg</h3>
-<input type="text" name = "search_input" id ="search_input">
-<a class = "search" name = "search" href="javascript:void(0)">Sök i forum</a>
-</form>
 <br>
-</div>
+<div class="ForumWindow">
+  <form id="pri" class="infobox" name="pri" method="POST">
+    <h2>Se alla inlägg</h2>
+    <a class = "prin VanligBtns button" name = "prin" href="javascript:void(0)">Visa kommentarer</a>
+  </form>
+  <div class="post_listing"></div>
 
-
-<form id="pri" name="pri" method="POST">
-<h3>Se alla inlägg</h3>
-<a class = "prin" name = "prin" href="javascript:void(0)">visa kommentarer</a>
-</form>
-
-
-<div class = "Publicera">
-<div class="post_listing"></div>
 </div>
 
 <script type="text/javascript">

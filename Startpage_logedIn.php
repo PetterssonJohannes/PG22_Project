@@ -24,19 +24,19 @@ if(!isset($_SESSION['UserID'])){
     <br><br><br><br><br><br><br><br>
     
     
-    <div class="infobox ValkommenMed">  
+    <div class="infobox2 ValkommenMed3">  
     <br> 
         <p>Välkommen <?php echo $_SESSION['UserName']; ?></p>
         
-        <div id="kategori_knapp">
+        <div id="kategori_knapp" class="VanligBtns">
             <button onclick="window.location.href='Careers.php'" name="CareersBtn">Se samtliga karriärsvägar</button>
         </div>
 
-        <div id="karriar_knapp">
+        <div id="karriar_knapp" class="VanligBtns">
             <button onclick="window.location.href='Compass.php'" name="CompassBtn">Karriärkompassen</button>
         </div>
 
-        <div id="forum_knapp">
+        <div id="forum_knapp" class="VanligBtns">
             <button onclick="window.location.href='forum.php'" name="CompassBtn">Karriärsforum</button>
         </div>
     
