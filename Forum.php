@@ -50,9 +50,6 @@ include_once "_views/_LoggaUt.php";
 <h3>Se tidigare publikationer</h3>
 <a class = "prin VanligBtns button" name = "prin" href="javascript:void(0)">Visa kommentarer</a>
 </form>
-<br>
-
-
 <div class="post_listing"></div>
 </div>
 

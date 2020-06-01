@@ -11,18 +11,15 @@
     }
 function Print_search($Search)
 {
-$db = new SQLite3('./db/user.db');
-$stmt = $db->prepare("SELECT * FROM User WHERE UserName LIKE :search ORDER BY UserID DESC");
-$stmt->bindValue(':search',"%".$Search."%", SQLITE3_TEXT);
-$result = $stmt->execute();
-while($row = $result->fetchArray())
-{
-    $row = (object) $row; ?>
-    ID:  <?php echo '<div class = "divComment">'.$row->UserID."</br>"; ?>
-
-    Användarnamn: <?php echo $row->UserName."</br>".'</div>';
-
-    echo '<p>---------</p>';
-}
+    $db = new SQLite3('./db/user.db');
+    $stmt = $db->prepare("SELECT * FROM User WHERE UserName LIKE :search ORDER BY UserID DESC");
+    $stmt->bindValue(':search',"%".$Search."%", SQLITE3_TEXT);
+    $result = $stmt->execute();
+    while($row = $result->fetchArray())
+    {
+        echo '<div id="ForumDisplay">'.'<div class="ForumUserInfo2">'."UserName: " .$row['UserName'].'<br>'."User-ID: ".$row['UserID'].'</div>'.'</div>';          
+            
+        echo '<hr class="solid">';
+    }
 }
 ?>
