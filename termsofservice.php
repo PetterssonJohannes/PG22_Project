@@ -21,7 +21,7 @@
             <div>
                 <h2>Här ska vi ha våra regler</h2>
                 HUR kommer vi använda er sparade data?
-                Vi kommer endast att spara hashad mail, användarnamn och email. Email-adressen kommer endast användas om vi behöver kontakta en viss användare av någon av följande anledningar:
+                Vi kommer endast att spara hashad password, användarnamn och email. Email-adressen kommer endast användas om vi behöver kontakta en viss användare av någon av följande anledningar:
                 1.Användaren har blivit avstängd på grund av att den brutit mot forumreglerna.
                 2. Användaren har svurit på forumet.
 
@@ -34,7 +34,7 @@
                 Om en användare bryter mot formreglerna kommer en admin att ta bort kommentarerna och användaren kan bli avstängd.
 
 
-                
+
 
                 
         </div>
