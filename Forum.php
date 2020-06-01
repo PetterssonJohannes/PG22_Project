@@ -19,10 +19,10 @@ if(!isset($_SESSION['UserID'])){
 </head>
 <?php 
 session_start();
-if(isset($_SESSION['user']))
+if(isset($_SESSION['UserName']))
 {
     echo "Välkommen </br>";
-        echo $_SESSION['user'];
+        echo $_SESSION['UserName'];
 }
 else
 {

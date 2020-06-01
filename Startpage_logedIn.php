@@ -35,6 +35,10 @@ if(!isset($_SESSION['UserID'])){
         <div id="karriar_knapp">
             <button onclick="window.location.href='Compass.php'" name="CompassBtn">Karriärkompassen</button>
         </div>
+
+        <div id="forum_knapp">
+            <button onclick="window.location.href='forum.php'" name="CompassBtn">Karriärsforum</button>
+        </div>
     
     </div>
  

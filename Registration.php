@@ -19,7 +19,7 @@
                 <label for="username">Användarnamn</label><br>
                 <input type="text" name="username" placeholder="Ditt namn..." required><br><br>
                 <label for="password">Lösenord</label><br>
-                <input type="text" name="password" placeholder="Ditt lösenord..." required><br><br>
+                <input type="password" name="password" placeholder="Ditt lösenord..." required><br><br>
                 <label for="email">Email</label> <br>
                 <input type="text" name="email" placeholder="Din email..." required><br><br>
                 <label for="accept">Jag har läst och godkänner <a href="termsofservice.php" target="_blank">Systemkarriärs användarvillkor</a></label>

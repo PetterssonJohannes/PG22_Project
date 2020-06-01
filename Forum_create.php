@@ -6,7 +6,7 @@ function Go_post()
 {
     if(!empty($_POST['message']))
     {
-        $UserName =$_SESSION['user'];
+        $UserName =$_SESSION['UserName'];
         $Message = $_POST['message'];
         Save_post($UserName, $Message); 
     }

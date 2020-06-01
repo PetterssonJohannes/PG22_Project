@@ -21,7 +21,7 @@
         <input type = "text" name = "username" placeholder="Ditt namn..." required>
         <br><br>
         Lösenord
-        <input type = "text" name = "password" placeholder="Ditt lösenord..." required>
+        <input type = "password" name = "password" placeholder="Ditt lösenord..." required>
         <br><br>
         <input type = "submit" class="VanligBtns" name = "Login" value = "Login"/>
         </form>
