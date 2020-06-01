@@ -23,6 +23,7 @@
                 <label for="email">Email</label> <br>
                 <input type="text" name="email" placeholder="Din email..." required><br><br>
                 <label for="accept">Jag har läst och godkänner <a href="termsofservice.php" target="_blank">Systemkarriärs användarvillkor</a></label>
+                <input type = "checkbox" class "companyBox" name = "companyCheck" value = "Checka för att registrera företag"><br><br>
                 <input type="checkbox" name="accept" required><br><br>
                 <input type="submit" name="register" value="Registrera">
             </form>

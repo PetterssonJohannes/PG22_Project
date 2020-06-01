@@ -3,14 +3,21 @@ function CreateTable(){
     $db = new SQLite3('./db/user.db');
     $db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100), UserPassword varchar(100), UserEmail varchar(100))');
 }
-function RegisterUser($username, $email, $password){
+function RegisterUser($username, $email, $password, $company){
 $db = new SQLite3('./db/user.db');
 //$db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100), UserPassword varchar(100), UserEmail varchar(100))');
-$stmt = $db->prepare("INSERT INTO User (UserName, UserPassword, UserEmail) VALUES (:username,:hashedPassword, :email)");
+if($company != null){
+    $company = true;
+}
+else {
+    $company = false;
+}
+$stmt = $db->prepare("INSERT INTO User (UserName, UserPassword, UserEmail, Company) VALUES (:username,:hashedPassword, :email, :company)");
 $hashedPass = password_hash($password, PASSWORD_DEFAULT);
 $stmt->bindParam( ':username', $username, SQLITE3_TEXT);
 $stmt->bindParam( ':email', $email, SQLITE3_TEXT);
 $stmt->bindParam( ':hashedPassword', $hashedPass, SQLITE3_TEXT);
+$stmt->bindParam( ':company', $company, SQLITE3_TEXT);
 if($stmt->execute()){
     $db->close();
     return true;
@@ -46,6 +53,9 @@ function Login($username, $password){
                 session_start();
                 $_SESSION['UserID'] = $resArr['UserID']; 
                 $_SESSION['UserName'] = $resArr['UserName']; 
+                if($resArr['Company'] != false){
+                    $_SESSION['Company'] = "True"; 
+                }
             $db->close();
             return true;
             }

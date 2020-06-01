@@ -23,7 +23,7 @@ else
     {
         if(ExistingUName($UserName))
         {
-            if(RegisterUser($UserName,$email,$password)){
+            if(RegisterUser($UserName,$email,$password,$_POST['companyCheck'])){
                 echo "<script type='text/javascript'>alert('Registreringen lyckades!'); window.location.href='login.php';</script>";
             }
 
