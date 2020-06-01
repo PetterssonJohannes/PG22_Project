@@ -10,7 +10,14 @@
     <body>
         <?php
             include_once "_views/_rubrik.php";
+            if(!isset($_SESSION['UserName']))
+        {
+            include_once "_views/_LoggaUt.php";
+        }
+        else
+        {
             include_once "_views/_LogRegBtn.php";
+        }
         ?>
         <br><br><br>
         <div class="infobox">

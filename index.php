@@ -10,7 +10,7 @@
     <body>
     <?php
         include_once "_views/_Rubrik.php";
-        if(isset($_SESSION['UserName']))
+        if(!isset($_SESSION['UserName']))
         {
             include_once "_views/_LoggaUt.php";
         }
