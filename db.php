@@ -20,7 +20,28 @@ else{
     return false;
 }
 }
+<<<<<<< HEAD
 function ValidateLogin($result, $password)
+=======
+
+function TestPrint(){ ///TA BORT - utgår från att detta aldrig används
+    $results = $db->query('SELECT * FROM User');
+while ($row = $results->fetchArray()) 
+{
+    $row = (object) $row; ?>
+ ID:  <?php echo $row->UserID."</br>"; ?>
+
+Namn: <?php echo $row->UserName."</br>"; ?>
+
+Password: <?php echo $row->UserPassword."</br>"; ?>
+
+Email: <?php echo $row->UserEmail."</br>";
+
+    echo '<p>---------</p>';
+}
+}
+function ValidateLogin($result, $username, $password)
+>>>>>>> 0178137bf9bc5c505b0e841a8ad6b58255a833c5
 {
     if(password_verify($password, $result['UserPassword']))
     {
@@ -63,14 +84,14 @@ function Login($username, $password){
     
 }
 
-function Save_post($ComName, $Comments) //Ny post från Calle
+function Save_post($UserName, $Message) //Ny post från Calle
 {
     $db = new SQLite3('./db/user.db');
-    $db->exec('CREATE TABLE IF NOT EXISTS forum(CommentsID integer, Comments varchar(500), ComName varchar(255))');
-    $sql = "INSERT INTO 'forum'('Comments', 'ComName') VALUES (:Comments, :ComName)";
+    $db->exec('CREATE TABLE IF NOT EXISTS PostQ1(PostID integer, UserName varchar(500), Message varchar(255))'); //behöövs detta
+    $sql = "INSERT INTO 'PostQ1'('UserName', 'Message') VALUES (:UserName, :Message)";
     $stmt = $db->prepare($sql); 
-    $stmt->bindParam(':Comments', $Comments, SQLITE3_TEXT);
-    $stmt->bindParam(':ComName', $ComName, SQLITE3_TEXT);
+    $stmt->bindParam(':Message', $Message, SQLITE3_TEXT);
+    $stmt->bindParam(':UserName', $UserName, SQLITE3_TEXT);
     if($stmt->execute())
     {
         $db->close();
@@ -82,7 +103,7 @@ function Save_post($ComName, $Comments) //Ny post från Calle
         return false;
     }
 }
-function Print_Comments() //Ny post från calle
+function Print_Comments() //Ny post från calle Förmodligen ta bort.... 
 {
         $db = new SQLite3('./db/user.db');
         $results = $db->query('SELECT * FROM forum');
