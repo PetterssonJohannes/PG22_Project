@@ -10,7 +10,14 @@ $atpos = stripos($_POST["email"], "@");
 $dotpos = strripos($_POST["email"], ".");
 $lastindex = (strlen($_POST["email"])-1);
 $passwCount = strlen($password);
-
+if($_POST['company'] == null)
+{
+    $company = 0;
+}
+else 
+{
+    $company = 1;
+}
 if($trimUName == "" || $trimpassw == "" || $trimemail == "" || $atpos == -1 || $dotpos == -1 || $atpos <2 || $dotpos < $atpos || $lastindex - $dotpos < 2 || $dotpos - $atpos < 2 || $dotpos == $lastindex)
 {           
     //$ermsg = "Please fill out the form in a correct way!";
@@ -23,7 +30,7 @@ else
     {
         if(ExistingUName($UserName))
         {
-            if(RegisterUser($UserName,$email,$password)){
+            if(RegisterUser($UserName, $email, $password, $company)){
                 echo "<script type='text/javascript'>alert('Registreringen lyckades!'); window.location.href='login.php';</script>";
             }
 
