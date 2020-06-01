@@ -1,3 +1,7 @@
+<?php
+        include_once "_views/_rubrik.php";
+        
+?>
 <!DOCTYPE html>
 <html lang="sv"> 
 <head>
@@ -9,50 +13,43 @@
 </head>
 <?php 
 session_start();
-if(isset($_SESSION['UserName']))
+if(isset($_SESSION['AdminStatus']))
 {
+    echo "Välkommen </br>";
+        echo $_SESSION['UserName'];
 }
 else
 {
 header("Location: index.php");
 }
-include_once "_views/_rubrik.php";
-include_once "_views/_LoggaUt.php";
 ?>
-<br><br><br><br><br><br><br>
-<div class="Fullbox">
-  <br>
-<h2>Välkommen <?php echo $_SESSION['UserName'] ?> </h2>
-
-  <div class = "Publicera Katinfobox">
+<div class = "Publicera">
+<form id="delete" name="delete" method="POST">
     
-    <form id="comment" name="comment" method="POST">
-    
-            <h2>Skriv en kommentar?</h2>
-      
-            <textarea id="textarea1" class="textarea1" name="textarea1"></textarea>
-            <a class = "submit VanligBtns button" name = "submit" href="javascript:void(0)">Publicera</a>    
-    </form>
-  </div>
-  <br>
-  <div class = "Publicera annonsbox">
-    <form id="sea" name="sea" method="POST">
-      <h2>Sök efter ett inlägg nedan</h2>
-      <input type="text" name = "search_input" id ="search_input">
-      <a class = "search VanligBtns button" name = "search" href="javascript:void(0)">Sök i forum</a>
-    </form>
-    <br>
-  </div>
+            <h2>Skriv in forum-id för att radera inlägg?</h2>
+<p>
+            <input type="number" id="number" name="number"></input>
+            <a class = "submit" name = "submit" href="javascript:void(0)">Radera inlägg</a>
+</p>
+</form>
 </div>
-<br><br>
-<div class = "Publicera ForumWindow">
-<form id="pri" class="infobox" name="pri" method="POST">
-<h3>Se tidigare publikationer</h3>
-<a class = "prin VanligBtns button" name = "prin" href="javascript:void(0)">Visa kommentarer</a>
+<div class = "Publicera">
+<form id="sea" name="sea" method="POST">
+<h3>Sök efter specifikt inlägg</h3>
+<input type="text" name = "search_input" id ="search_input">
+<a class = "search" name = "search" href="javascript:void(0)">Sök i forum</a>
 </form>
 <br>
+</div>
 
 
+<form id="pri" name="pri" method="POST">
+<h3>Se alla inlägg</h3>
+<a class = "prin" name = "prin" href="javascript:void(0)">visa kommentarer</a>
+</form>
+
+
+<div class = "Publicera">
 <div class="post_listing"></div>
 </div>
 
@@ -64,8 +61,9 @@ $(".submit").click(function(){ // Klick för att spara och visa forum
 
 
   //stop submit event 
-$textvar = $('#textarea1').val(); //Sparar
-      saveComments($textvar);
+$deletevar = $('#number').val(); //Sparar
+
+      deleteComments($deletevar);
     listComments();
     eraseText();
 
@@ -82,15 +80,15 @@ $(".prin").click(function(){
   listComments();
 });
 });
-function saveComments($textvar)
+function deleteComments($deletevar)
 { 
-    $.ajax({
+    $.ajax({ 
 
 type: 'POST',
 
-url: 'Forum_create.php', 
+url: 'Admin_process.php', 
 
-data:{'message' :$textvar}, 
+data:{'number' :$deletevar}, 
 
 success: function() { 
 
@@ -98,6 +96,8 @@ success: function() {
 }
 function listComments()
 { 
+
+
   $.ajax({
 
     url: 'Forum_list.php', //Skapa en till för post

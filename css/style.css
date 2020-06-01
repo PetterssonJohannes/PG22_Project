@@ -25,6 +25,7 @@ head
     margin-left: auto;
     margin-right: auto;
 }
+
 @media screen and (max-width: 600px){
     .column{
         width: 100%;
@@ -48,6 +49,18 @@ head
     content: "";
     display: table;
     clear: both;
+}
+.Fullbox
+{
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    background: #f2f2f2;
+    color: darkblue;
+    font-size: 20px;
+    border-radius: 5px;
 }
 .infobox
 {
@@ -73,11 +86,12 @@ head
     color: darkblue;
     font-size: 20px;
     border-radius: 5px;
+    background-image: none;
 }
 .annonsbox
 {
     padding: 10px;
-    text-align: right;
+    text-align: center;
     width: 36%;
     float: right;
     margin: 1% 2%;
@@ -85,10 +99,21 @@ head
     color: darkblue;
     font-size: 12px;
     border-radius: 5px;
+    text-decoration: none;
+}
+.FiftypBox
+{
+    box-sizing: border-box;
+}
+.Box
+{
+    float: left;
+    width: 60%;
+    padding: 50px;
 }
 body {
     background-image: url("../img/PG22_code.jpg");
-    position: relative;
+    position: static;
     margin: 0px;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -187,9 +212,9 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: 10px;
-  }
-  .textarea1
-  {
+}
+.textarea1
+{
     width: 80%;
     padding: 12px 20px;
     margin: 10px 10%;
@@ -197,7 +222,7 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: 10px;
-  }
+}
 input[type=submit] 
 {
     background-color: darkblue;
@@ -257,30 +282,23 @@ div.log_out_knapp
 {
     margin-top: 0px;
 }
-button
+.button
 {
     width: 120px;
     height: 40px;
     background-color: darkblue;
     color: white;
     text-align: center;
-    padding: 4px 0px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 10px 4px 0px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-
-    /* g{
-    background-image: url("../img/Kompass.jpg");
-    position: absolute;
-    margin-top: 10px;
-    width:  15%;
-    top: 500px;
-    left: 300px;
-    z-index: 2; 
-}*/
 #IT-sak
 {
     background-image: url("../img/PG22_Security.jpg");
@@ -328,4 +346,57 @@ button
 #loggastrl
 {
     height: 100px;
+}
+.ForumWindow
+{
+  padding: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+.ForumUserInfo
+{
+  color: black;
+  font-size: 15px;
+  margin: 8%;
+  vertical-align: middle;
+  display: inline-block;
+}
+#ForumUserInfoBox > div
+{
+  width: 120px;
+  min-height: 100px;
+  margin: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.ForumUserMessage
+{
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  margin: 5px;
+  min-height: 90px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#ForumMessageBox
+{
+  min-height: 100px;
+  width: 260px;
+  border-left: 3px solid darkblue;
+  display: inline-block;
+  vertical-align: middle;
+}
+#ForumDisplay > div
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+#forumpost{
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
 }

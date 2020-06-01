@@ -53,9 +53,13 @@ function Login($username, $password){
                 session_start();
                 $_SESSION['UserID'] = $resArr['UserID']; 
                 $_SESSION['UserName'] = $resArr['UserName']; 
+<<<<<<< HEAD
                 if($resArr['Company'] != false){
                     $_SESSION['Company'] = "True"; 
                 }
+=======
+                $_SESSION['AdminStatus'] = $resArr['AdminStatus'];
+>>>>>>> 17ecfd7e14f6ac01b4dc2690633d891ebd73f872
             $db->close();
             return true;
             }
@@ -72,7 +76,36 @@ function Login($username, $password){
     
     
 }
-
+function Delete_post($delete)
+{
+    $db = new SQLite3('./db/user.db');
+    $stmt = $db->prepare("DELETE FROM PostQ1 WHERE PostID = '$delete'");
+    if($stmt->execute())
+    {
+        $db->close();
+        return true;
+    }
+    else
+    {
+        $db->close();
+        return false;
+    }
+}
+function Delete_user($delete)
+{
+    $db = new SQLite3('./db/user.db');
+    $stmt = $db->prepare("DELETE FROM User WHERE UserID = '$delete'");
+    if($stmt->execute())
+    {
+        $db->close();
+        return true;
+    }
+    else
+    {
+        $db->close();
+        return false;
+    }
+}
 function Save_post($UserName, $Message) //Ny post från Calle
 {
     $db = new SQLite3('./db/user.db');
