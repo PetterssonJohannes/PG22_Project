@@ -12,7 +12,13 @@ else
 <html>
 <title>Systemvetarkarriär_inloggad</title>
     <head>
-        <script src="https:ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
         
             <meta charset="utf-8"/>   
         
@@ -55,7 +61,19 @@ else
         }
         ?>
     
- 
+    <br>
+        <div id="mapid"></div>
+        <br>
+        <form>
+        <div class="ForumWindow">
+        <h3>Hitta företag här, sök på företagsnamn</h3>
+            <input type="text" id="companyname"></input>
+            <a id="companysearch" class="VanligBtn button" name="companysearch" href="javascript:void(0)">Visa företag</a> 
+        <br>
+        </form>
+        <script type="text/javascript" src="js/printscripts.js"></script>
+        </div>
+    <br>
     </body>
 
 </html>
