@@ -36,11 +36,7 @@
                 Forumregler:
                 Man får inte skriva svordomar eller taskmörtiga kommentarer till andra användare.
                 Om en användare bryter mot formreglerna kommer en admin att ta bort kommentarerna och användaren kan bli avstängd.
-
-
-
-
-                
+              
         </div>
     </body>
 </html>
