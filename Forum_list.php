@@ -6,11 +6,11 @@ $results = $db->query('SELECT * FROM PostQ1 ORDER BY PostID DESC'); //Kolla till
 while ($row = $results->fetchArray()) 
     {
         $row = (object) $row; ?>
-        ID:  <?php echo $row->PostID."</br>"; ?>
+        ID:  <?php echo '<div class = "divComment">'.$row->PostID."</br>"; ?>
 
         Inlägg: <?php echo $row->Message."</br>"; ?>
 
-        Författare: <?php echo $row->UserName."</br>";
+        Författare: <?php echo $row->UserName."</br>".'</div>';
 
         echo '<p>---------</p>';
     }
