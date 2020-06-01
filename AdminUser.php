@@ -13,7 +13,7 @@
 </head>
 <?php 
 session_start();
-if(isset($_SESSION['UserName']))
+if(isset($_SESSION['AdminStatus']))
 {
     echo "Välkommen </br>";
         echo $_SESSION['UserName'];
@@ -24,28 +24,28 @@ header("Location: index.php");
 }
 ?>
 <div class = "Publicera">
-<form id="comment" name="comment" method="POST">
+<form id="delete" name="delete" method="POST">
     
-            <h2>Skriv en kommentar?</h2>
+            <h2>Skriv in användar-id för att radera användare?</h2>
 <p>
-            <textarea id="textarea1" name="textarea1"></textarea>
-            <a class = "submit" name = "submit" href="javascript:void(0)">publicera</a>
+            <input type="number" id="number" name="number"></input>
+            <a class = "submit" name = "submit" href="javascript:void(0)">Radera konto</a>
 </p>
 </form>
 </div>
 <div class = "Publicera">
 <form id="sea" name="sea" method="POST">
-<h3>Sök efter ett inlägg nedan</h3>
+<h3>Sök efter specifikt inlägg</h3>
 <input type="text" name = "search_input" id ="search_input">
-<a class = "search" name = "search" href="javascript:void(0)">Sök i forum</a>
+<a class = "search" name = "search" href="javascript:void(0)">Sök bland användare</a>
 </form>
 <br>
 </div>
 
 
 <form id="pri" name="pri" method="POST">
-<h3>Se tidigare publikationer</h3>
-<a class = "prin" name = "prin" href="javascript:void(0)">visa kommentarer</a>
+<h3>Se alla inlägg</h3>
+<a class = "prin" name = "prin" href="javascript:void(0)">visa användare</a>
 </form>
 
 
@@ -61,10 +61,10 @@ $(".submit").click(function(){ // Klick för att spara och visa forum
 
 
   //stop submit event 
-$textvar = $('#textarea1').val(); //Sparar
+$deletevar = $('#number').val(); //Sparar
 
-      saveComments($textvar);
-    listComments();
+      deleteUser($deletevar);
+    listUser();
     eraseText();
 
 });
@@ -77,30 +77,30 @@ $searchvar = $('#search_input').val();
 
 });
 $(".prin").click(function(){ 
-  listComments();
+  listUser();
 });
 });
-function saveComments($textvar)
+function deleteUser($deletevar)
 { 
-    $.ajax({
+    $.ajax({ 
 
 type: 'POST',
 
-url: 'Forum_create.php', 
+url: 'Admin_process_user.php', 
 
-data:{'message' :$textvar}, 
+data:{'number' :$deletevar}, 
 
 success: function() { 
 
     }});
 }
-function listComments()
+function listUser()
 { 
 
 
   $.ajax({
 
-    url: 'Forum_list.php', //Skapa en till för post
+    url: 'User_list.php', //Skapa en till för post
 
     success: function(res){ 
 
@@ -115,7 +115,7 @@ function listSearch($searchvar)
 
     type: 'POST',
 
-    url: 'Forum_search.php', 
+    url: 'AdminSearch.php', 
     
     data:{'search' :$searchvar}, 
 
