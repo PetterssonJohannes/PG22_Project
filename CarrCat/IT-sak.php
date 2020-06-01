@@ -9,7 +9,7 @@
     <body>
     
     <?php
-include_once('../_views/_rubrik.php');
+include_once('../_views/_RubrikSub.php');
 ?>
 <br>
 <div name="Buttons" class="BtnsLeft">

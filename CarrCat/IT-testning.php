@@ -8,7 +8,7 @@
     </head>
     <body>
         <?php
-            include_once('../_views/_rubrik.php');
+            include_once('../_views/_RubrikSub.php');
         ?>
         <div name="Buttons" class="BtnsLeft">
     <form action="../Careers.php" name="TillbakaBtn">
