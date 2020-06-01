@@ -1,10 +1,10 @@
 <?php
-session_start();
+/*session_start();
 if(!isset($_SESSION['UserID'])){
     header("Location: LogOut.php");
 }
 ?>
-<?php
+<?php*/
         include_once "_views/_rubrik.php";
         
 ?>
@@ -18,13 +18,6 @@ if(!isset($_SESSION['UserID'])){
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"> </script>
 </head>
 <?php 
-<<<<<<< HEAD
-
-?> 
-
-<br>
-<form id="comment" class="infobox" name="comment" method="POST">
-=======
 session_start();
 if(isset($_SESSION['user']))
 {
@@ -38,7 +31,6 @@ header("Location: index.php");
 ?>
 <div class = "Publicera">
 <form id="comment" name="comment" method="POST">
->>>>>>> 0178137bf9bc5c505b0e841a8ad6b58255a833c5
     
             <h2>Skriv en kommentar?</h2>
 <p>
