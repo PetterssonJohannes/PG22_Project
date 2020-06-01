@@ -25,7 +25,6 @@ head
     margin-left: auto;
     margin-right: auto;
 }
-div[class=".afmodal-header"] { background-image: none !important; }
 
 @media screen and (max-width: 600px){
     .column{
@@ -50,6 +49,18 @@ div[class=".afmodal-header"] { background-image: none !important; }
     content: "";
     display: table;
     clear: both;
+}
+.Fullbox
+{
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    background: #f2f2f2;
+    color: darkblue;
+    font-size: 20px;
+    border-radius: 5px;
 }
 .infobox
 {
@@ -77,12 +88,10 @@ div[class=".afmodal-header"] { background-image: none !important; }
     border-radius: 5px;
     background-image: none;
 }
-
-
 .annonsbox
 {
     padding: 10px;
-    text-align: right;
+    text-align: center;
     width: 36%;
     float: right;
     margin: 1% 2%;
@@ -92,9 +101,19 @@ div[class=".afmodal-header"] { background-image: none !important; }
     border-radius: 5px;
     text-decoration: none;
 }
+.FiftypBox
+{
+    box-sizing: border-box;
+}
+.Box
+{
+    float: left;
+    width: 60%;
+    padding: 50px;
+}
 body {
     background-image: url("../img/PG22_code.jpg");
-    position: relative;
+    position: static;
     margin: 0px;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -193,9 +212,9 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: 10px;
-  }
-  .textarea1
-  {
+}
+.textarea1
+{
     width: 80%;
     padding: 12px 20px;
     margin: 10px 10%;
@@ -203,7 +222,7 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: 10px;
-  }
+}
 input[type=submit] 
 {
     background-color: darkblue;
@@ -272,7 +291,6 @@ div.log_out_knapp
     text-align: center;
     display: inline-block;
     text-decoration: none;
-    
     font-size: 13px;
     padding: 10px 4px 0px;
     margin: 8px 0;

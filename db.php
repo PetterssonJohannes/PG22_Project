@@ -6,8 +6,18 @@ function CreateTable(){
 function RegisterUser($username, $email, $password, $company){
 $db = new SQLite3('./db/user.db');
 //$db->exec('CREATE TABLE IF NOT EXISTS User(UserID integer, UserName varchar(100), UserPassword varchar(100), UserEmail varchar(100))');
+<<<<<<< HEAD
 $stmt = $db->prepare("INSERT INTO User (UserName, UserPassword, UserEmail, Company) VALUES (:username,:hashedPassword, :email, :company)");
 
+=======
+if($company != null){
+    $company = true;
+}
+else {
+    $company = false;
+}
+$stmt = $db->prepare("INSERT INTO User (UserName, UserPassword, UserEmail, Company) VALUES (:username,:hashedPassword, :email, :company)");
+>>>>>>> 1c9d9873cac261c010c6ceb64e568326addf1133
 $hashedPass = password_hash($password, PASSWORD_DEFAULT);
 $stmt->bindParam( ':username', $username, SQLITE3_TEXT);
 $stmt->bindParam( ':email', $email, SQLITE3_TEXT);
@@ -48,11 +58,20 @@ function Login($username, $password){
                 session_start();
                 $_SESSION['UserID'] = $resArr['UserID']; 
                 $_SESSION['UserName'] = $resArr['UserName']; 
+<<<<<<< HEAD
+                if($resArr['Company'] != false){
+                    $_SESSION['Company'] = "True"; 
+                }
+=======
                 $_SESSION['AdminStatus'] = $resArr['AdminStatus'];
+<<<<<<< HEAD
                 if($resArr['Company'] == 1)
                 {
                     $_SESSION['Company'] = $resArr['Company'];
                 }
+=======
+>>>>>>> 17ecfd7e14f6ac01b4dc2690633d891ebd73f872
+>>>>>>> 1c9d9873cac261c010c6ceb64e568326addf1133
             $db->close();
             return true;
             }

@@ -30,7 +30,11 @@ else
     {
         if(ExistingUName($UserName))
         {
+<<<<<<< HEAD
             if(RegisterUser($UserName, $email, $password, $company)){
+=======
+            if(RegisterUser($UserName,$email,$password,$_POST['companyCheck'])){
+>>>>>>> 1c9d9873cac261c010c6ceb64e568326addf1133
                 echo "<script type='text/javascript'>alert('Registreringen lyckades!'); window.location.href='login.php';</script>";
             }
 
