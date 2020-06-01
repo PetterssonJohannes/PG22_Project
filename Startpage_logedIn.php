@@ -1,7 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION['UserID'])){
-    header("Location: LogOut.php");
+if(isset($_SESSION['UserID'])){
+}
+else
+{
+    header("Location: index.php");
 }
 ?>
 
@@ -18,7 +21,7 @@ if(!isset($_SESSION['UserID'])){
     </head>
     <body>
     <?php
-        include_once "_views/_rubrik.php"; 
+        include_once "_views/_Rubrik.php"; 
         include_once "_views/_LoggaUt.php";          
     ?>
     <br><br><br><br><br><br><br><br>
@@ -39,8 +42,19 @@ if(!isset($_SESSION['UserID'])){
         <div id="forum_knapp" class="VanligBtns">
             <button onclick="window.location.href='forum.php'" name="CompassBtn">Karriärsforum</button>
         </div>
-    
     </div>
+    <br>
+        <?php
+        if(isset($_SESSION['Company']))
+        {
+            include_once "_views/_CompanyBtn.php";
+        }
+        if(isset($_SESSION['AdminStatus']))
+        {
+            include_once "_views/_AdminBtn.php";
+        }
+        ?>
+    
  
     </body>
 

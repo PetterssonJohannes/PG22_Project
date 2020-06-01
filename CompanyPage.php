@@ -25,7 +25,6 @@ if(!isset($_SESSION['Company'])){
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>  
         
-    </head>
     <body>
     <?php
         include_once "_views/_rubrik.php"; 

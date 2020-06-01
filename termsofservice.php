@@ -1,22 +1,26 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang = "sv">
     <head>
         <script scr = "js/js.js"></script>
         <link rel = "stylesheet" type = "text/css" href = "css/style.css">
-        <h1>
+      
             <meta charset="utf-8"/>   
-        </h1> 
+        
     </head>
 
     <body>
-        <div class="header">
-            <div name="Rubrik" class="rubrik">
-                <h1>Systemvetarkarriär</h1><br>
-            </div>   
-        <div>
-
+    <?php
+        include_once "_views/_Rubrik.php"; 
+        if(isset($_SESSION['UserName']))
+        {
+            include_once "_views/_LoggaUt.php";
+        }
+        else
+        {
+            include_once "_views/_LogRegBtn.php";
+        }          
+    ?>
+<br><br><br>
         <div class="infobox">
             <div>
                 <h2>Här ska vi ha våra regler</h2>

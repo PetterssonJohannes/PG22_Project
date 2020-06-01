@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="sv">
     <head>
@@ -24,9 +22,9 @@
                 <input type="text" name="email" placeholder="Din email..." required><br><br>
                 <label for="accept">Jag har läst och godkänner <a href="termsofservice.php" target="_blank">Systemkarriärs användarvillkor</a></label>
                 <input type="checkbox" name="accept" required><br><br>
-                <h3> Klicka i om du representerar ett företag </h3>
-                <input type="checkbox" name="company" ><br>
-                <input type="submit" name="register" value="Registrera">
+                <label> Klicka i om du representerar ett företag </label>
+                <input type="checkbox" name="company"><br><br>
+                <input type="submit" class="VanligBtns button" name="register" value="Registrera">
             </form>
          
 

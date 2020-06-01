@@ -244,6 +244,15 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: 10px;
 }
+input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 10px 10%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: 10px;
+}
 .textarea1
 {
     width: 80%;

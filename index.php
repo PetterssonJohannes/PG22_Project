@@ -1,5 +1,3 @@
-<?php 
-?>
 <!DOCTYPE html>
 <html>
 <title>Systemvetarkarriär</title>
@@ -11,9 +9,18 @@
     </head>
     <body>
     <?php
-        include_once "_views/_rubrik.php";
-        include_once "_views/_LogRegBtn.php";
+        include_once "_views/_Rubrik.php";
+        if(isset($_SESSION['UserName']))
+        {
+            include_once "_views/_LoggaUt.php";
+        }
+        else
+        {
+            include_once "_views/_LogRegBtn.php";
+        }
+        
     ?>
+    <br><br><br><br><br>
     <div class="TwoBtns">
         <div>
             <form id="FirOfTwoBtns" action="Careers.php">
